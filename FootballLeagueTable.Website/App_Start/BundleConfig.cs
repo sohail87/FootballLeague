@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace FootballLeagueTable
+namespace FootballLeagueTable.Website
 {
     public class BundleConfig
     {

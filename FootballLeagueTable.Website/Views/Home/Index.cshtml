@@ -1,0 +1,35 @@
+﻿@model IEnumerable<FootballLeagueTable.Domain.TeamPosition>
+
+@{
+    ViewBag.Title = "League Table";
+}
+
+@Html.Partial("_PartialUploadResults")
+
+
+
+<div>
+    @if (Model.Any())
+    {
+        <h2>League Table</h2>
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th>Goals Scored</th>
+                <th>Goals Conceded</th>
+                <th>Goals Difference</th>
+                <th>Points</th>
+
+            </tr>
+
+            @foreach (var team in Model)
+            {
+            @Html.Partial("_PartialTeamPosition", team)
+            ;
+            }
+
+        </table>
+    }
+</div>
+

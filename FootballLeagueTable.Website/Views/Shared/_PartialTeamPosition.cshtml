@@ -1,0 +1,11 @@
+﻿@model FootballLeagueTable.Domain.TeamPosition
+<tr>
+    <td>@Model.LeaguePosition</td>
+    <td>
+        @Html.ActionLink(Model.Team, "MatchResults", new { controller = "Home", teamName = Model.Team })
+    </td>
+        <td>@Model.GoalsFor</td>
+    <td>@Model.GoalsAgainst</td>
+    <td>@Model.GoalDifference</td>
+    <td>@Model.Points</td>
+</tr>
